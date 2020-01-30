@@ -9,26 +9,14 @@ public class MyFindArray implements FindArray {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		
-		
-		
-				// Valores para teste	
-				//int vet1[] = {4,9,3,7,8};
-				//int vet1[] = {1,3,5};
-				//int vet1[] = {7,8,9};
-				//int vet1[] = {4,9,3,7,8,3,7,1};
-				
-				
-				//int vet2[] = {3,7};
-				//int vet2[] = {1};
-				//int vet2[] = {8,9,10};
-				//int vet2[] = {3,7};
-				
-				
+				//variavel na qual vai armazenar a posição correspondente
 				int posicaoValoresIguais = 0 ;
+				//variavel para armazenar a quantidade de valores iguais
 				int quantidadeIguais = 0;
+				//variavel para saber qual é o item que se precisa guardar a posição
 				int primeiroValorIgual = 0;
 				
+				//for para percorrer e ver se os valores do subArray correspondem ao array
 				for(int i = 0; i < array.length; i++){
 					for(int j = 0; j < subArray.length; j++){
 						
@@ -45,20 +33,22 @@ public class MyFindArray implements FindArray {
 							posicaoValoresIguais = i;
 						}
 						
-						
 					}
-				}if(quantidadeIguais >= subArray.length) {
-					
-					System.out.println("Achou na posição" + posicaoValoresIguais);	
+				}
+				//condicional para saber se os arrays correspondem 
+				if(quantidadeIguais >= subArray.length) {
+					sc.close();
+					return posicaoValoresIguais;
 					
 					
 				}else {
-					System.out.println("Achou na posição -1");	
-				
+					sc.close();
+					return -1;
+					
 				}
 		
-		sc.close();
-		return 0;
+	
+		
 		
 	}
 

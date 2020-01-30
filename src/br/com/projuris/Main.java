@@ -6,8 +6,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		//Scanner sc = new Scanner(System.in);
-	
+		
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("Quantos números para o primeiro array?");
@@ -32,8 +31,7 @@ public class Main {
 		
 		MyFindArray myfind= new MyFindArray();
 		
-		myfind.findArray(array,subArray);
-	
+		System.out.println("Retorno: " + myfind.findArray(array,subArray));
 		sc.close();
 		
 
